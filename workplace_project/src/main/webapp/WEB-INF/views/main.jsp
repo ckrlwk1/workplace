@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-<head>
+<html>  
+<head>   <!--  -->
 <meta data-n-head="ssr" charset="utf-8">
 <meta data-n-head="ssr" name="viewport" content="width=1200, minimal-ui">
 <meta data-n-head="ssr" data-hid="description" name="description"
