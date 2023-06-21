@@ -1,0 +1,40 @@
+#Logback level config
+logging:
+  level:
+    root: DEBUG
+
+spring:
+  profiles: "local"
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  main:
+    allow-circular-references: true    
+  db1:
+    datasource :
+#      jdbc-url: jdbc:log4jdbc:mysql://112.172.129.15:3306/txdb?serverTimezone=UTC&characterEncoding=UTF8&autoReconnect=true&useSSL=false
+#      username: txcloud
+#      password: 'txrncnr'
+      jdbc-url: jdbc:log4jdbc:mysql://sql-cloudgame-dev-mysql.mysql.database.azure.com:3306/txdb_2nd?serverTimezone=UTC&characterEncoding=UTF8&autoReconnect=true&useSSL=true
+      username: xclouddevadmin@sql-cloudgame-dev-mysql
+      password: 'Xclouddev2020#07'
+      driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      poolName: hkr
+      idleTimeout: 100000
+      minimumIdle: 10
+      maximumPoolSize: 10
+      connectionTimeout: 9000
+      maxLifetime: 110000
+ 
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  type-aliases-package: 
+    com.skt.tx
+  configuration:
+    map-underscore-to-camel-case: true
+    default-statement-timeout: 700000
+    jdbc-type-for-null: NULL
+    default-executor-type: REUSE
+    cache-enabled: TRUE
+    lazy-loading-enabled: TRUE    
